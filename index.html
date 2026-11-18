@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Qbits Records Studios Portfolio</title>
 <script src="./vendor/react.js"></script>
 <script src="./vendor/react-dom.js"></script>
@@ -16,6 +17,45 @@
 body{margin:0;background:#070707}
 a{color:#FFC21A;text-decoration:none}
 a:hover{color:#FFE08A}
+html{scroll-behavior:smooth}
+img,svg{max-width:100%}
+
+@media (max-width:760px){
+  body{overflow-x:hidden}
+  header>div{padding:14px 16px!important;flex-direction:column;align-items:flex-start!important}
+  header nav{width:100%;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important}
+  header nav>a{justify-content:center;text-align:center;box-sizing:border-box;padding:10px 8px!important}
+  header nav>a:last-child{grid-column:1/-1}
+  section{padding-left:16px!important;padding-right:16px!important}
+  section[id="top"]>div{padding:32px 16px 48px!important}
+  section[id="top"] h1{font-size:48px!important}
+  section[id="top"] p{font-size:16px!important}
+  section[id="top"]>div>div:last-child>a{width:100%;box-sizing:border-box;justify-content:center}
+  section[id="top"]>div>div:last-child{width:100%}
+  section[id="top"] img{width:120%;max-width:none!important}
+  section h2{font-size:44px!important}
+  section p{font-size:16px!important}
+  section[id="about"],section[id="work"],section[id="contact"]{padding-top:72px!important;padding-bottom:72px!important}
+  section[id="services"],section[id="process"]{padding-top:64px!important;padding-bottom:72px!important}
+  [style*="flex:1 1 420px"],[style*="flex:1 1 320px"]{flex-basis:100%!important}
+  [style*="flex:1 1 300px"],[style*="flex:1 1 340px"],[style*="flex:1 1 240px"],[style*="flex:1 1 340px"]{flex-basis:100%!important}
+  [style*="padding:36px 32px"],[style*="padding:32px"],[style*="padding:28px"]{padding:24px 20px!important}
+  article{flex-basis:100%!important;min-height:260px!important}
+  article>div:first-child{height:260px!important}
+  .event-gallery{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+  .event-gallery figure{border-radius:12px!important}
+  footer>div{padding:28px 16px!important;flex-direction:column;align-items:flex-start!important}
+  #contact a{overflow-wrap:anywhere}
+}
+
+@media (max-width:420px){
+  section[id="top"] h1{font-size:40px!important}
+  section h2{font-size:38px!important}
+  header nav>a{font-size:13px!important}
+  article>div:first-child{height:240px!important}
+  article{min-height:240px!important}
+  [style*="font-size:30px"]{font-size:26px!important}
+}
 </style>
 </helmet>
 
@@ -32,6 +72,7 @@ a:hover{color:#FFE08A}
 <a href="#about" style="color:#E6E8EC;padding:10px 0">About</a>
 <a href="#services" style="color:#E6E8EC;padding:10px 0">Services</a>
 <a href="#work" style="color:#E6E8EC;padding:10px 0">Work</a>
+<a href="#gallery" style="color:#E6E8EC;padding:10px 0">Gallery</a>
 <a href="#process" style="color:#E6E8EC;padding:10px 0">Process</a>
 <a href="#contact" style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:#FFC21A;color:#120d00;font-weight:600">Book a session</a>
 </nav>
@@ -251,6 +292,39 @@ a:hover{color:#FFE08A}
 </div>
 </section>
 
+<!-- EVENT GALLERY -->
+<section id="gallery" style="padding:100px 24px;box-sizing:border-box;background:#0c0c0d;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)">
+<div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
+<span style="font-size:14px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#FFC21A">Event gallery</span>
+<h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(44px,6vw,72px);line-height:.95;text-transform:uppercase;color:#F4F5F7">Moments from our events</h2>
+<p style="margin:0;font-size:16px;line-height:1.65;color:#B9BDC6">A collection of events, sessions and stories captured by Qbits Records Studios. To add photos, place them in the Images folder and update each image path and caption below.</p>
+</div>
+<div class="event-gallery" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px">
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460647.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460647.jpg" alt="Event photo 01" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 01</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460648.png" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460648.png" alt="Event photo 02" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 02</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460649 (1).jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460649 (1).jpg" alt="Event photo 03" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 03</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460649.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460649.jpg" alt="Event photo 04" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 04</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460650.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460650.jpg" alt="Event photo 05" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 05</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460651.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460651.jpg" alt="Event photo 06" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 06</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460652 (1).jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460652 (1).jpg" alt="Event photo 07" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 07</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460652.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460652.jpg" alt="Event photo 08" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 08</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460654.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460654.jpg" alt="Event photo 09" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 09</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460655.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460655.jpg" alt="Event photo 10" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 10</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460657.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460657.jpg" alt="Event photo 11" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 11</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460658 (1).jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460658 (1).jpg" alt="Event photo 12" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 12</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460658.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460658.jpg" alt="Event photo 13" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 13</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460659 (1).jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460659 (1).jpg" alt="Event photo 14" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 14</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460659.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460659.jpg" alt="Event photo 15" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 15</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460660.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460660.jpg" alt="Event photo 16" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 16</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460661 (1).jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460661 (1).jpg" alt="Event photo 17" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 17</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460661.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460661.jpg" alt="Event photo 18" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 18</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460664 (1).jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460664 (1).jpg" alt="Event photo 19" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 19</figcaption></figure>
+<figure style="margin:0;overflow:hidden;border-radius:16px;background:#17171b;border:1px solid rgba(255,255,255,.08)"><a href="Images/460664.jpg" target="_blank" rel="noopener noreferrer" style="display:block"><img src="Images/460664.jpg" alt="Event photo 20" loading="lazy" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover"></a><figcaption style="padding:12px 14px;font-size:14px;font-weight:500;color:#E6E8EC">Event 20</figcaption></figure>
+</div>
+</div>
+</section>
+
 <!-- PROCESS -->
 <section id="process" style="padding:90px 24px 100px;box-sizing:border-box;background:#0c0c0d;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)">
 <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:56px">
@@ -294,19 +368,19 @@ a:hover{color:#FFE08A}
 <div style="display:flex;flex-wrap:wrap;gap:20px">
 <div style="flex:1 1 240px;box-sizing:border-box;padding:28px;border-radius:18px;background:#111113;border:1px solid rgba(255,194,26,.22);display:flex;flex-direction:column;gap:10px">
 <span style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#FFC21A">Phone / WhatsApp</span>
-<span style="font-size:20px;font-weight:500;color:#F4F5F7">0707066380</span>
+<a href="https://wa.me/254707066380?text=Hi%20Qbits%20Records%20Studios%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" style="font-size:20px;font-weight:500;color:#F4F5F7;text-decoration:none">0707066380</a>
 </div>
 <div style="flex:1 1 240px;box-sizing:border-box;padding:28px;border-radius:18px;background:#111113;border:1px solid rgba(255,194,26,.22);display:flex;flex-direction:column;gap:10px">
 <span style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#FFC21A">Email</span>
-<span style="font-size:20px;font-weight:500;color:#F4F5F7">mbithithomas11@gmail.com</span>
+<a href="mailto:mbithithomas11@gmail.com" style="font-size:20px;font-weight:500;color:#F4F5F7;text-decoration:none">mbithithomas11@gmail.com</a>
 </div>
 <div style="flex:1 1 240px;box-sizing:border-box;padding:28px;border-radius:18px;background:#111113;border:1px solid rgba(255,194,26,.22);display:flex;flex-direction:column;gap:10px">
 <span style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#FFC21A">Social media</span>
-<span style="font-size:20px;font-weight:500;color:#F4F5F7">@QbitsRecstudios</span>
+<a href="https://www.instagram.com/qbitsrecstudios/" target="_blank" rel="noopener noreferrer" style="font-size:20px;font-weight:500;color:#F4F5F7;text-decoration:none">@QbitsRecstudios</a>
 </div>
 <div style="flex:1 1 240px;box-sizing:border-box;padding:28px;border-radius:18px;background:#111113;border:1px solid rgba(255,194,26,.22);display:flex;flex-direction:column;gap:10px">
 <span style="font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#FFC21A">Studio location</span>
-<span style="font-size:20px;font-weight:500;color:#F4F5F7">Githurai 44</span>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Githurai%2044" target="_blank" rel="noopener noreferrer" style="font-size:20px;font-weight:500;color:#F4F5F7;text-decoration:none">Githurai 44</a>
 </div>
 </div>
 </div>
